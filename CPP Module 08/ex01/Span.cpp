@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:55 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/03 19:19:05 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/04 14:43:29 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ Span::Span(void){
 	std::cout << "Span default constructor called" << std::endl;
 }
 Span::Span(unsigned int N) : _N(N) {
-	_nums.resize(_N);
+	_nums.reserve(_N);
 	//std::cout << "Span parametized constructor called" << std::endl;
 
 }
 Span::Span(Span &src){
+	*this = src;
 	//std::cout << "Span copy constructor called" << std::endl;
 
 }
@@ -29,9 +30,31 @@ Span::~Span(void){
 
 }
 
+Span	&Span::operator=(Span const &rhs){
+
+	if (this != &rhs)
+		*this = rhs;
+	return *this;
+	
+}
+
 void	Span::addNumber(int	num){
 
-	_nums.push_back(num);
-	std::cout << "size: " << _nums.size() << std::endl;
+	if (_nums.size() == _nums.capacity())
+		throw Span::MaxCapacityReachedExpception();
+	else
+		_nums.push_back(num);
 
+}
+
+int	Span::shortestSpan(void){
+	
+	int	aux;
+	int	res;
+	
+
+}
+
+int	Span::longestSpan(void){
+	
 }

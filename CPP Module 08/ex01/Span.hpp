@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:50 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/03 19:19:09 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/04 14:26:58 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ class	Span {
 		Span	&operator=(Span const &rhs);
 
 		void	addNumber(int num);
+		int		shortestSpan(void);
+		int		longestSpan(void);
+
+		class	MaxCapacityReachedExpception : public std::exception {
+			public:
+				virtual const char * what() const throw() { return "Span Max Capacity Reached"; }
+		};
 
 };
 
