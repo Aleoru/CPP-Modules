@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:58 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/09 20:05:46 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/09 20:12:55 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,15 @@ int	main(void)
 		bigsp.fillSpan(10000);
 		std::cout << bigsp.shortestSpan() << std::endl;
 		std::cout << bigsp.longestSpan() << std::endl;
-		
+		std::cout << std::endl;
+
+		std::cout << "\033[33;1m[    TEST 2    ]\033[0m" << std::endl;
+		Span	wsp(5);
+		wsp.addNumber(42);
+		std::cout << wsp.shortestSpan() << std::endl;
+		std::cout << wsp.longestSpan() << std::endl;
+
+
 	} catch (const std::exception &e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}

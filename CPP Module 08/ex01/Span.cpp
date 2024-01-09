@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:55 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/09 20:02:49 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/09 20:10:00 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,9 @@ void	Span::addNumber(int	num){
 }
 
 int	Span::shortestSpan(void){
-	
+
+	if (_nums.size() < 2)
+		throw Span::SpanNotFoundException();	
 	std::vector<int>	copy(_nums.size());
 
 	std::copy(this->_nums.begin(), this->_nums.end(), copy.begin());
@@ -69,6 +71,8 @@ int	Span::shortestSpan(void){
 
 int	Span::longestSpan(void){
 	
+	if (_nums.size() < 2)
+		throw Span::SpanNotFoundException();
 	std::vector<int>	copy(_nums.size());
 
 	std::copy(this->_nums.begin(), this->_nums.end(), copy.begin());

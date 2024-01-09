@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:50 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/09 19:40:26 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/09 20:08:40 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ class	Span {
 		class	MaxCapacityReachedExpception : public std::exception {
 			public:
 				virtual const char * what() const throw() { return "Span Max Capacity Reached"; }
+		};
+		
+		class	SpanNotFoundException : public std::exception {
+			public:
+				virtual const char * what() const throw() { return "Span Not Found"; }
 		};
 
 };
