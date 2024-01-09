@@ -6,11 +6,11 @@
 #    By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/09 18:44:34 by aoropeza          #+#    #+#              #
-#    Updated: 2024/01/03 18:46:42 by aoropeza         ###   ########.fr        #
+#    Updated: 2024/01/09 18:59:08 by aoropeza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= easyfind
+NAME	= span
 SRC		= main.cpp Span.cpp
 OBJS	= $(SRC:.cpp=.o)
 CC		= c++
