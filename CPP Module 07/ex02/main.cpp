@@ -6,16 +6,24 @@ int main(int, char**)
 {
     {
 
-        Array<int> numbers(MAX_VAL);
-        Array<int> array(3);
-        numbers[0] = 0;
-        numbers[1] = 1;
-        numbers[2] = 2;
-        Array<int> algo(array);
+		std::cout << "\033[33;1m[    My own test    ]\033[0m" << std::endl;
+        Array<std::string> array(MAX_VAL);
+        array[0] = "Hello World!";
+        array[1] = "42 is cool";
+        array[2] = "Some random string";
+        Array<std::string> something(array);
 
-        std::cout << numbers[0] << std::endl;
-        std::cout << numbers[1] << std::endl;
-        std::cout << numbers[2] << std::endl;
+        std::cout << "array:" << std::endl;
+        std::cout << array[0] << std::endl;
+        std::cout << array[1] << std::endl;
+        std::cout << array[2] << std::endl;
+        std::cout << std::endl;
+        std::cout << "something:" << std::endl;
+        std::cout << something[0] << std::endl;
+        std::cout << something[1] << std::endl;
+        std::cout << something[2] << std::endl;
+        std::cout << std::endl;
+		std::cout << "\033[33;1m[    Subject test    ]\033[0m" << std::endl;
 
     }
     {
@@ -64,6 +72,6 @@ int main(int, char**)
             numbers[i] = rand();
         }
         delete [] mirror;//
-        return 0;
     }
+    return 0;
 }

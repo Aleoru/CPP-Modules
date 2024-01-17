@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:31:06 by aoropeza          #+#    #+#             */
-/*   Updated: 2023/12/28 20:05:55 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/17 19:11:38 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ class	Array{
 		}
 
 	class	OutOfBoundsException : public std::exception {
-		virtual const char* what() const throw() { return " Out of Bounds"; };
+		virtual const char* what() const throw() { return "Out of Bounds"; };
 	};
 
 };
