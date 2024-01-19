@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 18:20:13 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/16 19:48:14 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/19 18:39:35 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int main()
 {
 	{
+		std::cout << "\033[33;1m[    SUBJECT TEST    ]\033[0m" << std::endl;
 		MutantStack<int> mstack;
 		mstack.push(5);
 		mstack.push(17);
@@ -39,6 +40,8 @@ int main()
 	}
 
 	{
+		std::cout << std::endl;
+		std::cout << "\033[33;1m[    LIST TEST    ]\033[0m" << std::endl;
 		std::list<int> li;
 		li.push_back(5);
 		li.push_back(17);

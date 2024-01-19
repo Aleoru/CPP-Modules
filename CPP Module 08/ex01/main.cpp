@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:58 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/09 20:12:55 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/19 18:27:45 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ int	main(void)
 		std::cout << std::endl;
 
 		std::cout << "\033[33;1m[    TEST 2    ]\033[0m" << std::endl;
-		Span	wsp(5);
-		wsp.addNumber(42);
-		std::cout << wsp.shortestSpan() << std::endl;
-		std::cout << wsp.longestSpan() << std::endl;
+		Span	wrongsp(5);
+		wrongsp.addNumber(42);
+		std::cout << wrongsp.shortestSpan() << std::endl;
+		std::cout << wrongsp.longestSpan() << std::endl;
 
 
 	} catch (const std::exception &e) {

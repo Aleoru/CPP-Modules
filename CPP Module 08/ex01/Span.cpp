@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:46:55 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/09 20:10:00 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/19 18:30:12 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,10 @@ void	Span::fillSpan(unsigned int n){
 
 }
 
-void	Span::printSpan(void) {
+/* void	Span::printSpan(void) {
 
 	for (std::vector<int>::const_iterator it = _nums.begin(); it != _nums.end(); ++it){
 		std::cout << *it << std::endl;
 	}
 
-}
+} */
