@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:25:35 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/21 20:47:59 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:43:40 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ class	RPN{
 		RPN	&operator=(RPN const & rhs);
 
 		int	calculate(void);
-	
+
+	class	InvalidExpressionException : public std::exception {
+		virtual const char* what() const throw() { return "Invalid Reverse Polish Notation Exception"; }
+	};
 
 };
 
