@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:25:32 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/23 21:55:47 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:13:30 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ int	operations(int a, int b, char op) {
 		case '/':
 			return (a / b);
 		default:
-			std::cout << "Wrong operator" << std::endl;
+			throw RPN::InvalidExpressionException();
 			break;
 	}
-	return (-1);
+	return (0);
 
 }
 
@@ -69,6 +69,8 @@ int	RPN::calculate(std::string str) {
 			pos = 0;
 		str.erase(0, pos + 1);
 	}
+	if (nums.size() != 1)
+		throw RPN::InvalidExpressionException();
 	return (nums.top());
 
 }
