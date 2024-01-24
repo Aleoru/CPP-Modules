@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:22:34 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/24 21:28:24 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/24 21:35:46 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,15 @@ void	PmergeMe::vectorPmergeMe(int argc, char **argv){
 	} catch(std::exception &e) {
 		throw InvalidValueFoundException();
 	}
+	std::cout << "Before: ";
+	for(size_t i = 0; i < array.size(); i++)
+		std::cout << array[i] << " ";
 	std::cout << std::endl;
-
 	vectorMergeSort(array);
+	std::cout << "After: ";
+	for(size_t i = 0; i < array.size(); i++)
+		std::cout << array[i] << " ";
+	std::cout << std::endl;
 
 }
 
@@ -96,9 +102,14 @@ void	PmergeMe::dequePmergeMe(int argc, char **argv){
 	} catch(std::exception &e) {
 		throw InvalidValueFoundException();
 	}
-	std::cout << "Deque array: " << std::endl;
+	std::cout << "Before: ";
 	for(size_t i = 0; i < array.size(); i++)
-		std::cout << array[i] << ", ";
+		std::cout << array[i] << " ";
+	std::cout << std::endl;
+	//DequeMergeSort(array);
+	std::cout << "After: ";
+	for(size_t i = 0; i < array.size(); i++)
+		std::cout << array[i] << " ";
 	std::cout << std::endl;
 
 }
