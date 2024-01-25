@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:22:29 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/24 21:24:03 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:54:24 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
 #include <vector>
 #include <deque>
 
