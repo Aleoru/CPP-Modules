@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:25:35 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/23 22:06:23 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:59:47 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class	RPN{
 
 	private:
 		RPN(void){};
-		RPN(RPN const &src);
+		RPN(const RPN &src);
 		~RPN(void){};
-		RPN	&operator=(RPN const & rhs);
+		RPN	&operator=(const RPN & rhs);
 
 	public:
 

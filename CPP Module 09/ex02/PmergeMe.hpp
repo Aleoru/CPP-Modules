@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:22:29 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/25 12:54:24 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:59:46 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ class	PmergeMe {
 
 	private:
 		PmergeMe(){};
-		PmergeMe(PmergeMe const &src){*this = src;};
+		PmergeMe(const PmergeMe &src){*this = src;};
 		~PmergeMe(){};
-		PmergeMe	&operator=(PmergeMe const &rhs);
+		PmergeMe	&operator=(const PmergeMe  &rhs);
 
 	public:
-		static void	vectorPmergeMe(int argc, char **argv);
-		static void	dequePmergeMe(int argc, char **argv);
+		static void	sortPmergeMe(int argc, char **argv);
 
 	class	InvalidValueFoundException : public std::exception {
 		virtual const char* what() const throw() { return "Invalid Value Found"; }

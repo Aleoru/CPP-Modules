@@ -6,17 +6,17 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:25:32 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/24 18:13:30 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:06:20 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
 
-RPN::RPN(RPN const &src) {
+RPN::RPN(const RPN &src) {
 	*this = src;
 }
 
-RPN	& RPN::operator=(RPN const & rhs) {
+RPN	& RPN::operator=(const RPN & rhs) {
 	if (this != &rhs)
 		*this = rhs;
 	return *this;
