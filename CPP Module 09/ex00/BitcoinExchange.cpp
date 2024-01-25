@@ -6,7 +6,7 @@
 /*   By: aoropeza <aoropeza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 19:50:51 by aoropeza          #+#    #+#             */
-/*   Updated: 2024/01/25 20:18:25 by aoropeza         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:22:10 by aoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ static bool	validDate(std::string date) {
 	
 	int	year, month, day;
 	
+	if (date.find_first_not_of("0123456789-") != std::string::npos)
+		throw BitcoinExchange::InvalidValueException();
 	try {
 		year = std::stoi(date.substr(0, 4));
 		month = std::stoi(date.substr(5, 6));
@@ -54,7 +56,7 @@ static bool	validValue(std::string value) {
 	} catch (const BitcoinExchange::TooLargeNumberException &e) {
 			throw BitcoinExchange::TooLargeNumberException();
 	} catch (const std::exception &e) {
-		if (value.find_first_not_of("0123456789") != std::string::npos)
+		if (value.find_first_not_of("0123456789.") != std::string::npos)
 			throw BitcoinExchange::InvalidValueException();
 	}
 	return (true);
