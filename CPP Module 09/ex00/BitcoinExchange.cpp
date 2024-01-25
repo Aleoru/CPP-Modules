@@ -48,7 +48,7 @@ static bool	validValue(std::string value) {
 		float	num = std::stof(value);
 		if (num < 0)
 			throw BitcoinExchange::NotPositiveNumberException();
-		else if (num > 100)
+		else if (num > 1000)
 			throw BitcoinExchange::TooLargeNumberException();
 
 	} catch (const BitcoinExchange::NotPositiveNumberException &e) {
@@ -58,24 +58,6 @@ static bool	validValue(std::string value) {
 	} catch (const std::exception &e) {
 		if (value.find_first_not_of("0123456789.") != std::string::npos)
 			throw BitcoinExchange::InvalidValueException();
-	}
-	return (true);
-
-}
-
-static bool	validValue(float num) {
-
-	try {
-
-		if (num < 0)
-			throw BitcoinExchange::NotPositiveNumberException();
-		else if (num > 100)
-			throw BitcoinExchange::TooLargeNumberException();
-
-	} catch (const BitcoinExchange::NotPositiveNumberException &e) {
-			throw BitcoinExchange::NotPositiveNumberException();
-	} catch (const BitcoinExchange::TooLargeNumberException &e) {
-			throw BitcoinExchange::TooLargeNumberException();
 	}
 	return (true);
 
@@ -149,11 +131,10 @@ void	BitcoinExchange::bitcoinExchange(std::string file) {
 				key = content.substr(0, content.find(" | "));
 				value = content.substr(content.find(" | ") + 3);
 				try {
-					if (validDate(key) || validValue(value)){
+					if (validDate(key) && validValue(value)){
 						it = db.find(previousDate(key, db));
 						num = it->second * std::stof(value);
-						if (validValue(num))
-							std::cout << key << " => " << value << " = " << num << std::endl;
+						std::cout << key << " => " << value << " = " << num << std::endl;
 					}
 				} catch (const std::exception &e) {
 					std::cerr << "Error: " << e.what() << std::endl;
